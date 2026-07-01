@@ -45,9 +45,7 @@ export function GameProvider({ children }) {
 
     setConnectionStatus('connecting');
 
-    const backendHost = window.location.hostname === 'localhost' 
-      ? 'http://localhost:5000' 
-      : `${window.location.protocol}//${window.location.hostname}:5000`;
+    const backendHost = "https://tambola-backend-rvk2.onrender.com";
 
     const socket = io(backendHost, {
       transports: ['websocket', 'polling'],
